@@ -18,199 +18,288 @@
         <meta property="og:description" content="Giving Africa back it's true name (Alkebu-lan, garden of Eden). We fund the next generation of African ventures and as an investor; grow big with it.">
         <meta name="twitter:card" content="summary_large_image">
 
-        <script src="./js/jquery.min.js"></script>
-        <link rel="stylesheet" href="./js/bootstrap/css/bootstrap.css">
-        <script src="./js/script.js"></script>
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/content-box.css">
-        <link rel="stylesheet" href="./js/php/contact-form.css">
-    
-        <link rel="icon" href="./images/logos/ourfund-circle.png">
-        <link rel="stylesheet" href="./css/skin.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
         <link rel="stylesheet" href="./js/font-awesome/css/font-awesome.css">
-
+        <link rel="icon" href="./images/logos/ourfund-circle.png">
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/script.js"></script>
+        <style>
+            @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+                100% { transform: translateY(0px); }
+            }
+            .animate-float {
+                animation: float 3s ease-in-out infinite;
+            }
+            /* Apply Poppins font to the entire site */
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+            /* Make headings slightly bolder */
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+            }
+            /* Lighter weight for paragraphs */
+            p {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 300;
+            }
+        </style>
     </head>
-<body>
-    <header class="fixed-top scroll-change" data-menu-anima="fade-bottom">
-        <div class="navbar navbar-default mega-menu-fullwidth navbar-fixed-top" role="navigation">
-            <div class="navbar navbar-main">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <a class="navbar-brand" href="index.html">
-                            <h2><img width="38" height="38" src="./images/logos/ourfund-circle.png" alt="logo" />urfund</h2>                            
-                        </a>
-                    </div>
-                    <div class="collapse navbar-collapse">
-                        <div class="nav navbar-nav navbar-right">
-                            <ul class="nav navbar-nav">
-                                <li>
-                                    <a href="#" role="button" target="_blank">creating eden in Africa</a>
-                                </li>
-                            </ul>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center px-4 sm:px-6 lg:px-8 h-20">
+                <!-- Logo Section -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-xl blur opacity-70 animate-float"></div>
+                            <div class="relative bg-white rounded-xl p-2 shadow">
+                                <img class="h-8 w-8" src="./images/logos/ourfund-circle.png" alt="Ourfund">
+                            </div>
                         </div>
-                    </div>
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">urfund</span>
+                            <span class="text-xs text-gray-600">Creating Eden in Africa</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <!-- <div class="hidden md:flex items-center space-x-8">
+                    <a href="#why-us" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Why Us</a>
+                    <a href="#ventures" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Portfolio</a>
+                    <a href="#invest" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Invest</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200">About</a>
+                </div> -->
+
+                <!-- CTA Buttons -->
+                <div class="flex items-center space-x-4">
+                    <a href="#request-early-access" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 shadow hover:shadow-md">
+                        Apply for Funding
+                        <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <!-- Mobile menu button -->
+                    <button type="button" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors duration-200">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
-    </header>
-    <div class="section-two-blocks two-blocks-container blocks-right bg-color white margin-top-90">
-        <div class="row">
-            <div class="col-md-6">
-                <a class="img-box lightbox i-center" href="#" data-lightbox-anima="fade-top">
-                    <!-- <i class="fa fa-play"></i> -->
-                    <img src="./images/logos/tourist-place.jpeg" />
+
+        <!-- Mobile menu (hidden by default) -->
+        <div class="hidden md:hidden bg-white border-t border-gray-100 shadow-sm">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#why-us" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md">Why Us</a>
+                <a href="#ventures" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md">Portfolio</a>
+                <a href="#invest" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md">Invest</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md">About</a>
+            </div>
+            <div class="px-5 py-4 border-t border-gray-100">
+                <a href="#request-early-access" class="block text-center px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-indigo-700">
+                    Apply for Funding
                 </a>
             </div>
-            <div class="col-md-6">
-                <div class="content">
-                    <h1 class="text-xl">We fund the next generation of African ventures.</h1>
-                    <p>
-                        With support from within and outside our network for those that want to do the work!
-                    </p>
-                    <a href="#request-early-access" class="circle-button btn btn-sm btn-border white">Apply as a venture owner</a>
-                </div>
-            </div>
         </div>
-    </div>
-    <div class="section-bg-image border-bottom bg-top" style="background-image:url(./images/bg-11.png)">
-        <div class="container content">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="./images/logos/tourism-danfo.jpeg" alt="" />
-                </div>
-                <div class="col-md-6">
-                    <h1>a $200B+ market</h1>
-                    <p style="letter-spacing: 0.2px;">
-                        Nigeria and Africa at large has abundant, but untapped resources. The people investment is an untapped and under-invested sector that can stimulate Nigeria and Africa's socio-economic progress through job creation, infrastructure development, business development & a raise in next-level African entrepreneurs.
-                        The industry to say the least is operating below capacity, unorganized and largely neglected by both government and the private sector, with no organized effort to unlock its potentials.
-                        
-                    </p>
-                    <hr class="space s" />
-                    <div class="icon-list">
-                        <div class="list-item">
-                            <i class="fa fa-circle-o text-l"></i><label>As an investor, you earn as the portfolio grows.</label>
-                        </div>
-                        <div class="list-item">
-                            <i class="fa fa-circle-o text-l"></i><label>Contribute to massive infrastructure development.</label>
-                        </div>
-                    </div>
-                    <hr class="space m" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-empty no-padding-top">
-        <div class="container content">
-            <hr class="space" />
-            <div class="row">
-                <div class="text-center">
-                    <h1>Why do we care?</h1>
-                    <p>Giving Africa back it's true name <b>(Alkebu-lan, garden of Eden)</b>. When promises fail, effort is an equivalent substitute.</p>
-                </div>
-            </div>
-            <hr />
-            <div class="row">
-                <div class="col-md-3">
-                    <h4>Improved Standard of Living</h4>
-                </div>
-                <div class="col-md-3">
-                    <h4>Faster Infrastructure Development</h4>
-                </div>
-                <div class="col-md-3">
-                    <h4>Career & Income Growth</h4>
-                </div>
-                <div class="col-md-3">
-                    <h4>Exponential Productivity</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-empty no-padding-top">
-        <div class="container content">
-            <div class="row vertical-row">
-                <div class="col-md-6">
-                    <h1>you can also earn while that happens...</h1>
-                    <p>
-                        Don't worry if you do not have cash, there are non-cash investment options available.
-                    </p>
-                    <hr class="space s" />
-                </div>
-                <div class="col-md-6 boxed-inverse">
-                    <div class="grid-list">
-                        <div class="grid-box row">
-                            <div class="grid-item col-md-6">
-                                <div class="icon-box icon-box-top-bottom">
-                                    <div class="icon-box-cell">
-                                        <i class="fa-users fa text-xl"></i>
-                                    </div>
-                                    <div class="icon-box-cell">
-                                        <label class="text-m">Service Vendor</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-item col-md-6">
-                                <div class="icon-box icon-box-top-bottom">
-                                    <div class="icon-box-cell">
-                                        <i class="fa-map-marker fa text-xl"></i>
-                                    </div>
-                                    <div class="icon-box-cell">
-                                        <label class="text-m">Property Lease</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-item col-md-6">
-                                <div class="icon-box icon-box-top-bottom">
-                                    <div class="icon-box-cell">
-                                        <i class="fa-lock fa text-xl"></i>
-                                    </div>
-                                    <div class="icon-box-cell">
-                                        <label class="text-m">Security</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-item col-md-6">
-                                <div class="icon-box icon-box-top-bottom">
-                                    <div class="icon-box-cell">
-                                        <i class="fa-lightbulb-o fa text-xl"></i>
-                                    </div>
-                                    <div class="icon-box-cell">
-                                        <label class="text-m">Advisory</label>
-                                        <!-- <p class="text-s">Consultancy</p> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <section class="section-bg-image bg-top" style="background-image:url(./images/bg-13.png)" id="request-early-access">
-        <div class="container content">
-            <div class="row">
-                <div class="col-md-12 boxed-inverse shadow-1">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h1 class="text-l text-color">We are always reviewing business plans & proposals on a rolling bases.</h1>
-                            <hr class="space m" />
-                            <p>Kindly let us know what you are working on anytime anyday, you'll surely hear back from us.</p>
-                            <a class="circle-button btn-sm btn" href="https://williams990010.typeform.com/to/Xb9pz9va" target="_blank"><i class="fa fa-plus"></i>Apply for funding.</a>
-                        </div>
+    </nav>
 
-                        <div class="col-md-6">
-                            <div class="form-box form-ajax">
-                                <div class="row">
-                                    <div data-tf-widget="Xb9pz9va" data-tf-iframe-props="title=Apply for Funding - Ourfund.io" data-tf-medium="snippet" style="width:100%;height:400px;"></div><script src="//embed.typeform.com/next/embed.js"></script>                                </div>
-                                <hr class="space xs" />
-                                <div id="success-box" style="display: none;">
-                                    <div class="alert alert-success">Awesome! We've received your request.</div>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen bg-gradient-to-br from-purple-900 via-indigo-800 to-purple-900 pt-32 pb-24 overflow-hidden flex items-center">
+        <!-- Animated background elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute w-[800px] h-[800px] -top-40 -left-40 bg-purple-500/30 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+            <div class="absolute w-[1000px] h-[1000px] -bottom-40 -right-40 bg-indigo-500/30 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+            <div class="absolute w-[600px] h-[600px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-purple-600/30 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white relative z-10 lg:pr-8">
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="inline-flex px-4 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm text-white/90">
+                            🌍 The Future of African Ventures
+                        </div>
+                        <div class="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent"></div>
+                    </div>
+
+                    <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-8 tracking-tight">
+                        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-indigo-200">Pioneering</span>
+                        <span class="relative inline-block">
+                            Africa's Next
+                            <div class="absolute bottom-2 left-0 w-full h-3 bg-purple-400/30 -rotate-2"></div>
+                        </span>
+                        <span class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-indigo-200">
+                            Tech Revolution
+                        </span>
+                    </h1>
+
+                    <div class="space-y-6 mb-10">
+                        <p class="text-xl text-purple-100/90 leading-relaxed max-w-xl">
+                            We're not just funding businesses; we're architecting Africa's technological renaissance. Join us in building the next generation of unicorns that will define the continent's digital future.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-6 md:gap-8 mt-8">
+                            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                                <div class="text-3xl font-bold text-white mb-1">$200B+</div>
+                                <div class="text-sm text-purple-200">Market Opportunity</div>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                                <div class="text-3xl font-bold text-white mb-1">54</div>
+                                <div class="text-sm text-purple-200">Countries. One Vision.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-6 items-center">
+                        <a href="#request-early-access" class="group inline-flex items-center px-8 py-4 text-base font-semibold rounded-full bg-white text-purple-900 hover:bg-purple-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                            Launch Your Venture
+                            <svg class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- <div class="flex items-center space-x-4">
+                            <div class="flex -space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-indigo-400 border-2 border-white flex items-center justify-center text-lg">🚀</div>
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-purple-400 border-2 border-white flex items-center justify-center text-lg">💡</div>
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-indigo-500 border-2 border-white flex items-center justify-center text-lg">🌱</div>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-white">200+ Ventures</div>
+                                <div class="text-sm text-purple-200">Already Funded</div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="relative lg:pl-8">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-indigo-600/20 rounded-2xl backdrop-blur-sm transform rotate-3"></div>
+                    <img src="./images/logos/tourist-place.jpeg" alt="African Innovation" class="rounded-2xl shadow-2xl transform -rotate-3 transition-transform hover:rotate-0 duration-500 relative z-10">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl transform -rotate-3 transition-transform hover:rotate-0 duration-500"></div>
+                    
+                    <!-- Investment Stats -->
+                    <div class="absolute -right-4 -bottom-4 bg-white rounded-xl shadow-2xl p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-100 to-indigo-100 flex items-center justify-center">
+                                    <i class="fa fa-line-chart text-purple-600 text-2xl"></i>
                                 </div>
-                                <div id="error-box" style="display: none;">
-                                    <div class="alert alert-warning">Email address is required</div>
+                            </div>
+                            <div>
+                                <div class="text-sm font-medium text-purple-600">Investment Growth</div>
+                                <div class="text-2xl font-bold text-gray-900">385% YoY</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Stack Indicator -->
+                    <div class="absolute -left-4 -top-4 bg-white/90 backdrop-blur rounded-xl shadow-xl p-4 transform -rotate-6 hover:rotate-0 transition-transform duration-500">
+                        <div class="flex items-center space-x-2">
+                            <div class="flex space-x-1">
+                                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                            </div>
+                            <span class="text-xs font-medium text-gray-600">Future Tech Hub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-white/10">
+                <div class="grid gap-8">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-white mb-1 text-center">
+                            Giving Africa back it's pride, Alkebulan.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Stats Bar -->
+            <!-- <div class="mt-16 pt-8 border-t border-white/10">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-white mb-1">40+</div>
+                        <div class="text-sm text-purple-200">Tech Sectors</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-white mb-1">$50M+</div>
+                        <div class="text-sm text-purple-200">Deployed Capital</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-white mb-1">1000+</div>
+                        <div class="text-sm text-purple-200">Jobs Created</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-white mb-1">15+</div>
+                        <div class="text-sm text-purple-200">Partner Countries</div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Market Size Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="./images/logos/tourism-danfo.jpeg" alt="African Innovation" class="rounded-lg shadow-xl">
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full flex items-center justify-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-center text-white">
+                            <div class="text-2xl font-bold">$200B+</div>
+                            <div class="text-sm">Tech Market</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Africa's Digital Renaissance</h2>
+                    <p class="text-gray-600 text-lg mb-8">
+                        Africa stands at the cusp of a technological revolution. With the world's youngest population, rising smartphone adoption, and untapped digital markets, the continent represents the next frontier in global tech innovation.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-br from-purple-600 to-indigo-600 text-white">
+                                    <i class="fa fa-mobile text-xl"></i>
                                 </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Digital-First Economy</h3>
+                                <p class="mt-2 text-gray-600">1.2B+ population with 40% under 25, driving rapid tech adoption</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-br from-purple-600 to-indigo-600 text-white">
+                                    <i class="fa fa-rocket text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Startup Ecosystem</h3>
+                                <p class="mt-2 text-gray-600">Rapidly growing tech hubs across major cities</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-br from-purple-600 to-indigo-600 text-white">
+                                    <i class="fa fa-line-chart text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Exponential Growth</h3>
+                                <p class="mt-2 text-gray-600">44% annual growth in tech investment since 2020</p>
                             </div>
                         </div>
                     </div>
@@ -218,18 +307,119 @@
             </div>
         </div>
     </section>
-    <i class="scroll-top scroll-top-mobile show fa fa-sort-asc"></i>
-    <footer class="footer-base">
-        <div class="content">
-            <div class="row copy-row">
-                <div class="col-md-12 copy-text">
-                    © 2021 ourfund.io - creating Eden in Africa <span>Subsidiary of viroke.com</span>
+
+    <!-- Why We Care Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">Why We Care</h2>
+                <p class="mt-4 text-xl text-gray-600">Empowering Africa's Tech Revolution</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fa fa-code text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Digital Innovation</h3>
+                    <p class="text-gray-600">
+                        Supporting Africa's tech talent and fostering innovation hubs that drive the continent's digital transformation.
+                    </p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fa fa-globe text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Global Recognition</h3>
+                    <p class="text-gray-600">
+                        Positioning Africa as a global tech powerhouse, showcasing its innovative solutions and entrepreneurial spirit.
+                    </p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fa fa-users text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Community Impact</h3>
+                    <p class="text-gray-600">
+                        Creating sustainable tech ecosystems that generate jobs, improve living standards, and build future-ready communities.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-16 text-center">
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Together, we're building a future where African innovation leads global technological advancement, creating opportunities and prosperity for generations to come.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Options Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">You can also earn while that happens...</h2>
+                    <p class="text-gray-600 text-lg mb-8">
+                        Don't worry if you do not have cash, there are non-cash investment options available.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+                        <i class="fa fa-users text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-lg font-medium text-gray-900">Service Vendor</h3>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+                        <i class="fa fa-map-marker text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-lg font-medium text-gray-900">Property Lease</h3>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+                        <i class="fa fa-lock text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-lg font-medium text-gray-900">Security</h3>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+                        <i class="fa fa-lightbulb-o text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-lg font-medium text-gray-900">Advisory</h3>
+                    </div>
                 </div>
             </div>
         </div>
-        <div data-tf-popover="Xb9pz9va" data-tf-button-color="#0445AF" data-tf-button-text="Launch me" data-tf-iframe-props="title=Apply for Funding - Ourfund.io" data-tf-medium="snippet" style="all:unset;"></div><script src="//embed.typeform.com/next/embed.js"></script>
-        <script async src="./js/bootstrap/js/bootstrap.min.js"></script>
-        <script src="./js/request-access.js"></script>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="request-early-access" class="py-20 bg-gradient-to-r from-purple-600 to-indigo-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">We are always reviewing business plans & proposals</h2>
+                        <p class="text-gray-600 text-lg mb-8">
+                            Kindly let us know what you are working on anytime anyday, you'll surely hear back from us.
+                        </p>
+                        <a href="https://williams990010.typeform.com/to/Xb9pz9va" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-purple-600 hover:bg-purple-700 transition-colors duration-300">
+                            Apply for funding
+                            <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="p-12 bg-gray-50">
+                        <div data-tf-widget="Xb9pz9va" data-tf-iframe-props="title=Apply for Funding - Ourfund.io" data-tf-medium="snippet" style="width:100%;height:400px;"></div>
+                        <script src="//embed.typeform.com/next/embed.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400">© 2024 ourfund.io - creating Eden in Africa <span class="mx-2">|</span> Subsidiary of viroke.com</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="./js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/request-access.js"></script>
 </body>
 </html>
